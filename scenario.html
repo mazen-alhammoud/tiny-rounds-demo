@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Scenario</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1 id="case-title">Loading...</h1>
+    <p id="case-summary"></p>
+  </header>
+
+  <div class="mode-toggle-bar">
+    <button class="toggle-btn active" id="btn-patient">Talk to Patient</button>
+    <button class="toggle-btn" id="btn-physician">Ask Attending</button>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-window active" id="patient-chat-window">
+      <div class="messages" id="patient-messages">
+        </div>
+      <div id="patient-typing-indicator" class="typing-indicator">
+          <span></span><span></span><span></span>
+      </div>
+      <div class="chat-actions">
+        <button id="export-patient-conversation-btn" class="action-button">Export Patient Chat</button>
+      </div>
+      <form id="patient-chat-form" class="chat-input-form">
+        <input type="text" id="patient-chat-input" placeholder="Ask the patient..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="chat-window" id="physician-chat-window">
+      <div class="messages" id="physician-messages">
+        </div>
+      <div id="physician-typing-indicator" class="typing-indicator">
+          <span></span><span></span><span></span>
+      </div>
+      <div class="chat-actions">
+        <button id="export-physician-conversation-btn" class="action-button">Export Attending Physician Chat</button>
+      </div>
+      <form id="physician-chat-form" class="chat-input-form">
+        <input type="text" id="physician-chat-input" placeholder="Ask the attending physician..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="status-message" style="display:none; text-align: center; margin-top: 20px; font-weight: bold;"></div>
+
+
+  <script src="js/scenario.js" defer></script>
+</body>
+</html>

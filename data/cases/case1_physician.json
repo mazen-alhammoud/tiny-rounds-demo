@@ -1,0 +1,355 @@
+{
+    "id": "case1",
+    "title": "Attending Physician - Migraine Masterclass OSCE Session",
+    "summary": "The attending physician provides a comprehensive, interactive teaching session on migraine headaches, emphasizing diagnostic rigor, management strategies, and patient education through Socratic dialogue, clinical pearls, and real-time feedback.",
+  
+    "system_prompt": "You are an attending pediatric physician with a strong emphasis on patient-centered care, ethical considerations, and effective communication. Your role is to guide the student through the patient encounter using Socratic questioning, provide constructive feedback, and assess their clinical reasoning. Ensure the student demonstrates thorough history-taking, physical exam skills, and appropriate management plans. **Crucially, when discussing patient rights and decision-making for minors, emphasize the distinction between 'consent' (from parents/guardians) and 'assent' (the child's willingness to participate). Reinforce that for pediatric patients, obtaining the child's age-appropriate assent is a vital ethical and practical component of care, in addition to parental consent.** Your overarching educational objective is to cultivate independent, empathetic, and clinically competent future pediatricians.",
+  
+    "keyHistoryPoints": [
+      { "category": "Chief Complaint", "point": "Primary reason for visit: Recurrent severe headaches." },
+      { "category": "HPI: Onset & Pattern", "point": "Started 6 months ago, gradually worsening pattern; 4-8 episodes/month, no consistent trigger identified by patient initially." },
+      { "category": "HPI: Duration", "point": "Headaches last 4 hours to 3 days, consistent with migraine duration." },
+      { "category": "HPI: Character & Location", "point": "Throbbing, pulsating pain; unilateral (right temporal/frontal, sometimes global during severe attacks)." },
+      { "category": "HPI: Severity & Impact", "point": "Rated 7-8/10 at peak, significantly impairing school attendance (missing 1-2 days/month) and social activities (stopped choir practice during attacks)." },
+      { "category": "HPI: Associated Symptoms", "point": "Nausea (no vomiting), severe photophobia and phonophobia. No osmophobia, dizziness, or diplopia reported." },
+      { "category": "HPI: Aura", "point": "Reports occasional (20% of attacks) shimmering, zigzag lines in peripheral vision, lasting 20-30 minutes, resolving before headache onset. (Confirm presence/absence of typical aura features)." },
+      { "category": "HPI: Triggers", "point": "Stress (school exams), lack of consistent sleep, skipping meals, dehydration. Patient also *suspects* chocolate/caffeine withdrawal but not firmly established." },
+      { "category": "HPI: Relieving Factors & Medications", "point": "Dark, quiet room. Sleep. Over-the-counter ibuprofen (200-400mg, takes 2-3 tabs usually ineffective). No prescription abortives tried." },
+      { "category": "Past Medical History", "point": "Healthy, no significant childhood illnesses, no history of head trauma, no chronic medications." },
+      { "category": "Family History", "point": "Mother has a history of 'severe headaches' diagnosed as migraines, managed with triptans. Maternal aunt also has migraines." },
+      { "category": "Social History", "point": "Lives with both parents, one younger sibling. Academic performance declining due to headaches. Engaged in choir prior to symptom worsening. Reports moderate stress levels, especially around academics." },
+      { "category": "Sleep History", "point": "Sleep onset varies, often stays up late studying (1 AM) and wakes around 7 AM. Weekend sleep-in (10 AM). Concerns for sleep hygiene." },
+      { "category": "Caffeine Intake", "point": "Occasional soda/coffee during study sessions, but no regular daily intake leading to withdrawal concern." },
+      { "category": "Review of Systems: Red Flags (Absence of)", "point": "No focal neurological deficits (weakness, numbness, speech changes), no visual field defects, no papilledema, no thunderclap headache (sudden, severe onset), no headache awakened from sleep, no positional headache, no worsening with cough/strain, no fever/neck stiffness, no recent head trauma leading to current symptoms. Normal growth and development." }
+    ],
+  
+    "teachingFlow": [
+      {
+        "stage": "initial_assessment_overview_1",
+        "question": "Alright, doctor, you've reviewed the chief complaint. What's your initial broad differential diagnosis for recurrent headaches in an adolescent?",
+        "expectedStudentPoints": [
+          "Primary headaches (migraine, tension, cluster)",
+          "Secondary headaches (intracranial pressure issues, infection, trauma, structural lesions, medication overuse, pseudotumor cerebri, sinusitis)"
+        ],
+        "feedback": "Excellent start, it's important to consider both primary and secondary causes. Let's narrow down by focusing on concerning features.",
+        "next": "initial_assessment_overview_2"
+      },
+      {
+        "stage": "initial_assessment_overview_2",
+        "question": "What red flag symptoms would you specifically ask about when evaluating headaches?",
+        "expectedStudentPoints": [
+          "New onset or worsening pattern",
+          "Focal neurological signs",
+          "Thunderclap headache",
+          "Headache awakening from sleep"
+        ],
+        "feedback": "Good, identifying red flags early helps prioritize urgent evaluation.",
+        "next": "initial_assessment_overview_3"
+      },
+      {
+        "stage": "initial_assessment_overview_3",
+        "question": "How would you categorize the urgency of investigating a headache with red flag features?",
+        "expectedStudentPoints": [
+          "Urgent neuroimaging and referral",
+          "Emergency assessment for thunderclap headache"
+        ],
+        "feedback": "Correct, any red flag requires prompt investigation to exclude serious causes.",
+        "next": "history_taking_PQRST_1"
+      },
+  
+      {
+        "stage": "history_taking_PQRST_1",
+        "question": "Using the PQRST mnemonic, what provoking and palliating factors would you ask about for this patient's headaches?",
+        "expectedStudentPoints": [
+          "Triggers such as stress, sleep deprivation, skipped meals",
+          "Relief with rest, dark room, medications"
+        ],
+        "feedback": "Well done, knowing triggers and relief factors helps guide management.",
+        "next": "history_taking_PQRST_2"
+      },
+      {
+        "stage": "history_taking_PQRST_2",
+        "question": "What questions would you ask to assess the quality and location of the headache pain?",
+        "expectedStudentPoints": [
+          "Throbbing, pulsating, pressure, sharp",
+          "Unilateral or bilateral, frontal or temporal"
+        ],
+        "feedback": "Great, characterizing pain quality and location is key to diagnosis.",
+        "next": "history_taking_PQRST_3"
+      },
+      {
+        "stage": "history_taking_PQRST_3",
+        "question": "How would you assess the severity and impact of the headaches on this patient's daily life?",
+        "expectedStudentPoints": [
+          "Pain rated on 0-10 scale",
+          "Impact on school attendance, social activities",
+          "Frequency and duration"
+        ],
+        "feedback": "Excellent, understanding severity and impact guides urgency and management.",
+        "next": "history_taking_PQRST_4"
+      },
+      {
+        "stage": "history_taking_PQRST_4",
+        "question": "What timing-related questions would you ask regarding the headache's onset, frequency, and duration?",
+        "expectedStudentPoints": [
+          "When did headaches start?",
+          "How often do they occur per month?",
+          "How long does each headache last?",
+          "Are there any patterns or triggers related to timing?"
+        ],
+        "feedback": "Good, timing details help differentiate headache types.",
+        "next": "history_taking_associated_symptoms"
+      },
+  
+      {
+        "stage": "history_taking_associated_symptoms",
+        "question": "What are the classic associated symptoms of migraine you'd inquire about?",
+        "expectedStudentPoints": [
+          "Nausea, vomiting",
+          "Photophobia, phonophobia",
+          "Occasionally osmophobia"
+        ],
+        "feedback": "Excellent, these symptoms help confirm the migraine diagnosis.",
+        "teaching_moment": {
+          "topic": "Migraine Associated Symptoms",
+          "explanation": "Migraine is defined by headaches plus at least two of nausea/vomiting, photophobia, or phonophobia. Some patients also experience sensitivity to smells (osmophobia) or allodynia."
+        },
+        "quiz_question": {
+          "question": "What is the minimum number of associated symptoms required (along with headache characteristics) to meet ICHD-3 criteria for migraine without aura?",
+          "options": ["One", "Two", "Three", "None, if headache is severe enough"],
+          "correct_answer": "Two",
+          "feedback": "Correct! At least two associated symptoms are required."
+        },
+        "next": "history_taking_aura"
+      },
+  
+      {
+        "stage": "history_taking_aura",
+        "question": "Please describe what questions you'd ask the patient about aura symptoms.",
+        "expectedStudentPoints": [
+          "Visual disturbances (zigzag lines, shimmering)",
+          "Timing and duration of aura",
+          "Sensory, speech, or motor symptoms"
+        ],
+        "feedback": "Good, detailed aura description distinguishes migraine subtypes.",
+        "next": "history_taking_red_flags"
+      },
+  
+      {
+        "stage": "history_taking_red_flags",
+        "question": "What red flag symptoms would make you urgently consider neuroimaging?",
+        "expectedStudentPoints": [
+          "Thunderclap headache",
+          "Focal neurological deficits",
+          "Papilledema",
+          "Headache worsening pattern or awakening patient"
+        ],
+        "feedback": "Excellent, these symptoms require prompt evaluation.",
+        "teaching_moment": {
+          "topic": "Red Flags: When to Image",
+          "explanation": "Red flags suggest secondary causes like tumors, infections, or hemorrhage. Imaging (MRI preferred) is essential in such cases."
+        },
+        "quiz_question": {
+          "question": "A patient presents with a thunderclap headache. What immediate actions should you take?",
+          "type": "short_answer",
+          "correctAnswers": [
+            "Order immediate neuroimaging (CT head without contrast)",
+            "Consider lumbar puncture if CT is normal",
+            "Emergency department evaluation"
+          ],
+          "feedback": "Correct! Thunderclap headache is a medical emergency."
+        },
+        "next": "diagnosis_criteria"
+      },
+  
+      {
+        "stage": "diagnosis_criteria",
+        "question": "Based on the history, what is your working diagnosis and which ICHD-3 criteria support it?",
+        "expectedStudentPoints": [
+          "Migraine with aura or without aura",
+          "Recurring attacks lasting 4-72 hours",
+          "At least two headache features (unilateral, pulsating, moderate/severe, aggravated by activity)",
+          "At least two associated symptoms (nausea/vomiting, photophobia, phonophobia)"
+        ],
+        "feedback": "Well reasoned! Migraine is a clinical diagnosis with established criteria.",
+        "teaching_moment": {
+          "topic": "Role of Neuroimaging in Migraine",
+          "explanation": "Neuroimaging isn't routinely needed unless red flags or atypical features are present."
+        },
+        "next": "management_acute_nonpharm"
+      },
+  
+      {
+        "stage": "management_acute_nonpharm",
+        "question": "What non-pharmacological advice would you give to manage acute migraine attacks?",
+        "expectedStudentPoints": [
+          "Rest in dark, quiet room",
+          "Hydration",
+          "Stress management",
+          "Cold compress"
+        ],
+        "feedback": "Good, these strategies can reduce attack severity.",
+        "next": "management_acute_pharm_1"
+      },
+  
+      {
+        "stage": "management_acute_pharm_1",
+        "question": "What is your first-line pharmacological treatment for acute migraine in this patient?",
+        "expectedStudentPoints": [
+          "NSAIDs such as ibuprofen or naproxen",
+          "Acetaminophen if NSAIDs contraindicated"
+        ],
+        "feedback": "Correct, early NSAID use is effective for most patients.",
+        "next": "management_acute_pharm_2"
+      },
+  
+      {
+        "stage": "management_acute_pharm_2",
+        "question": "When would you consider using triptans in an adolescent migraine patient?",
+        "expectedStudentPoints": [
+          "If NSAIDs are ineffective or contraindicated",
+          "For moderate to severe migraine attacks",
+          "With appropriate age and dosing considerations"
+        ],
+        "feedback": "Good, triptans are effective second-line agents with age-appropriate use.",
+        "next": "management_acute_pharm_3"
+      },
+  
+      {
+        "stage": "management_acute_pharm_3",
+        "question": "What contraindications and precautions should you consider before prescribing triptans?",
+        "expectedStudentPoints": [
+          "Cardiovascular disease",
+          "Uncontrolled hypertension",
+          "Hemiplegic or basilar migraine",
+          "Pregnancy caution"
+        ],
+        "feedback": "Excellent, safety is paramount when prescribing triptans.",
+        "next": "management_preventive_1"
+      },
+  
+      {
+        "stage": "management_preventive_1",
+        "question": "What indications would prompt you to start preventive migraine therapy in this patient?",
+        "expectedStudentPoints": [
+          "Four or more severe headaches per month",
+          "Significant disability impacting daily life",
+          "Failure of acute treatment",
+          "Long or debilitating aura"
+        ],
+        "feedback": "Correct, prevention is indicated when migraine frequency or severity significantly impairs function.",
+        "next": "management_preventive_2"
+      },
+  
+      {
+        "stage": "management_preventive_2",
+        "question": "What lifestyle modifications should you recommend as part of migraine prevention?",
+        "expectedStudentPoints": [
+          "Regular sleep schedule",
+          "Regular meals, hydration",
+          "Stress management",
+          "Regular aerobic exercise",
+          "Limiting caffeine and triggers"
+        ],
+        "feedback": "Excellent, lifestyle measures are foundational to prevention.",
+        "next": "management_preventive_3"
+      },
+  
+      {
+        "stage": "management_preventive_3",
+        "question": "What pharmacological options are available for migraine prevention in adolescents?",
+        "expectedStudentPoints": [
+          "Topiramate",
+          "Propranolol",
+          "Amitriptyline",
+          "Cyproheptadine (younger children)",
+          "Consider CGRP monoclonal antibodies off-label after failure of other preventives"
+        ],
+        "feedback": "Good overview, pharmacological prevention requires monitoring for side effects and titration.",
+        "teaching_moment": {
+          "topic": "CGRP in Migraine Pathophysiology and Treatment",
+          "explanation": "CGRP is a neuropeptide involved in migraine. CGRP monoclonal antibodies are emerging treatments, typically used in adults after failure of oral preventives; pediatric use is limited but evolving."
+        },
+        "quiz_question": {
+          "question": "Name two common side effects of Topiramate you would counsel a patient on.",
+          "type": "short_answer",
+          "correctAnswers": ["Paresthesias (tingling)", "Cognitive slowing ('dopamax')", "Weight loss", "Kidney stones", "Glaucoma"],
+          "feedback": "Good job! Patient counseling on side effects is critical for adherence."
+        },
+        "next": "counseling_and_follow_up"
+      },
+  
+      {
+        "stage": "counseling_and_follow_up",
+        "question": "How would you counsel the patient and her parents on managing migraines, and what would be your plan for follow-up?",
+        "expectedStudentPoints": [
+          "Educate migraine as a brain disorder, not just headache",
+          "Lifestyle and trigger management",
+          "Proper acute medication use, avoiding overuse",
+          "Set realistic expectations for prevention",
+          "Discuss school accommodations if needed",
+          "Stress management techniques",
+          "Explain red flags requiring emergency care",
+          "Plan follow-up in 4-6 weeks to assess response"
+        ],
+        "feedback": "Excellent counseling points, patient and family education is key to success.",
+        "teaching_moment": {
+          "topic": "Behavioral Interventions for Migraine",
+          "explanation": "CBT, biofeedback, and relaxation techniques reduce migraine frequency and severity with fewer side effects, and should be part of a comprehensive plan."
+        },
+        "next": "conclusion"
+      },
+  
+      {
+        "stage": "conclusion",
+        "question": "We've covered a lot today. What are your key takeaways regarding the diagnosis and management of migraine in adolescents, and what is one new thing you learned?",
+        "expectedStudentPoints": [
+          "Migraine is a clinical diagnosis based on ICHD-3 criteria.",
+          "Thorough history is crucial, especially for red flags.",
+          "Management involves acute and preventive strategies, plus lifestyle.",
+          "Patient education and follow-up are vital."
+        ],
+        "feedback": "Fantastic summary! Personalized care is essential in migraine management. Great work today!",
+        "next": null
+      }
+    ],
+  
+    "relevantInvestigations": [
+      { "test": "MRI Brain with/without contrast", "indication": "Presence of red flags, atypical presentation, focal neurological deficits, new-onset seizures, unexplained neurological symptoms." },
+      { "test": "EEG", "indication": "Considered if there are atypical features suggesting a seizure disorder, but not routine for typical migraine." },
+      { "test": "Lumbar Puncture", "indication": "Suspected meningitis/encephalitis (fever, neck stiffness, altered mental status) or pseudotumor cerebri (papilledema, visual changes)." },
+      { "test": "Blood work (CBC, ESR, CRP)", "indication": "If systemic symptoms suggest infection or inflammatory conditions (e.g., vasculitis)." }
+    ],
+  
+    "differentialDiagnosis": [
+      {
+        "name": "Tension-type Headache (TTH)",
+        "distinguishing_features": "Typically bilateral, pressing/tightening quality, mild-moderate intensity, not aggravated by routine physical activity, no nausea/vomiting, no photophobia/phonophobia (or only one)."
+      },
+      {
+        "name": "Cluster Headache",
+        "distinguishing_features": "Severe unilateral periorbital pain, with autonomic symptoms like tearing, nasal congestion; short duration (15-180 minutes), occurs in clusters over weeks."
+      },
+      {
+        "name": "Medication Overuse Headache",
+        "distinguishing_features": "Chronic daily headache in patient using acute headache medications more than 10-15 days/month."
+      },
+      {
+        "name": "Intracranial Mass Lesion",
+        "distinguishing_features": "Progressive headache, worse on awakening, associated neurological deficits, papilledema."
+      },
+      {
+        "name": "Pseudotumor Cerebri (Idiopathic Intracranial Hypertension)",
+        "distinguishing_features": "Headache with papilledema, vision changes, normal neuroimaging; mostly in obese adolescent females."
+      }
+    ],
+  
+    "commonMedications": [
+      { "name": "Ibuprofen", "dose": "200-400 mg every 6-8 hours as needed", "notes": "First-line NSAID for acute attacks" },
+      { "name": "Acetaminophen", "dose": "10-15 mg/kg/dose every 4-6 hours as needed", "notes": "Alternative for NSAID intolerance" },
+      { "name": "Sumatriptan", "dose": "10-20 mg nasal spray or 25-50 mg oral tablet for adolescents over 12", "notes": "Second-line abortive agent" },
+      { "name": "Topiramate", "dose": "Start 15 mg daily, titrate slowly", "notes": "Preventive therapy with side effects" },
+      { "name": "Propranolol", "dose": "10-20 mg twice daily, titrate", "notes": "Beta-blocker preventive; monitor heart rate and BP" }
+    ]
+  }
+  

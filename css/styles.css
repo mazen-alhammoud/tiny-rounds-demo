@@ -1,0 +1,465 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body & Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e9ebf0; /* Lighter, modern background */
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  min-height: 100vh; /* Ensures body takes full viewport height */
+}
+
+/* Header */
+header {
+  background-color: #283593; /* Deep indigo for header */
+  color: white;
+  padding: 2rem 2.5rem; /* More generous padding */
+  text-align: left; /* Aligns content to the left */
+  user-select: none; /* Prevents text selection on header */
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.8; /* Slightly less prominent subtext */
+}
+
+/* Search Section (New addition) */
+.search-section {
+  max-width: 720px; /* Constrains width */
+  margin: 1.5rem auto 2rem; /* Centers and adds vertical spacing */
+  padding: 0 1rem; /* Horizontal padding for smaller screens */
+}
+
+.search-wrapper {
+  display: flex; /* Aligns input and button horizontally */
+  gap: 0.5rem; /* Space between input and button */
+}
+
+#search-input {
+  flex-grow: 1; /* Allows input to take available space */
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+}
+
+#search-input:focus {
+  outline: 2px solid #5c6bc0; /* Indigo outline on focus */
+  border-color: #5c6bc0;
+}
+
+#search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #5c6bc0; /* Indigo button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+#search-button:hover {
+  background-color: #3949ab; /* Darker indigo on hover */
+}
+
+/* Main Content Container (from previous setup, adjusted to fit new max-width for sections) */
+/* This will now serve as a wrapper for all specialty sections */
+main#main-content {
+  margin: 20px auto; /* Keep some top/bottom margin */
+}
+
+/* Section Container (for Pediatrics Neurology, etc.) */
+.section-container {
+  max-width: 960px; /* Constrains width of specialty sections */
+  margin: 2rem auto; /* Centers sections with more vertical space */
+  padding: 0 1rem; /* Horizontal padding */
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #283593; /* Deep indigo for titles */
+  margin-bottom: 1.5rem; /* Space below title */
+  border-bottom: 2px solid #e0e0e0; /* Light grey underline */
+  padding-bottom: 0.5rem; /* Space between title and underline */
+}
+
+/* Scenario Cards Container (holds cards within each section) */
+[id^="scenario-container-"] { /* Targets IDs starting with 'scenario-container-' */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5rem; /* Space between cards */
+  padding-bottom: 2rem; /* Space at the bottom of the grid */
+}
+
+/* Scenario Cards (now named .card for consistency) */
+.card { /* Changed from .scenario-card to .card */
+  background-color: white;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lifts card slightly */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+.card-content { /* New wrapper for card text content */
+  padding: 1.5rem;
+  flex-grow: 1; /* Allows content to fill vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom if content is short */
+}
+
+.card-content h3 { /* Card title */
+  font-size: 1.3rem;
+  color: #283593;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.card-content p { /* Card description */
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Mode Toggle Bar (for scenario.html - assuming a separate page or modal) */
+.mode-toggle-bar {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: #283593;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn:not(.active):hover {
+  background-color: #e0e0e0;
+}
+
+/* Chat Container (for scenario.html) */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  max-width: 960px;
+  width: 100%;
+  margin: 0.5rem auto 2rem;
+  padding: 1rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  height: calc(100vh - 240px); /* Adjust based on header/toggle bar height */
+  box-sizing: border-box;
+}
+
+/* Chat window */
+.chat-window {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-window.active {
+  display: flex; /* Shown when active */
+}
+
+/* Messages wrapper - This should be a flex column container for individual messages */
+.messages {
+  flex-grow: 1.4; /* Allow messages to take up most space */
+  overflow-y: auto; /* Enable scrolling for messages */
+  padding-right: 8px; /* For scrollbar space */
+  margin-bottom: 1rem;
+  white-space: pre-wrap; /* Preserve whitespace and break lines */
+  font-size: 1rem;
+  line-height: 1.4;
+
+  /* Ensure this container is also a flex column to align messages */
+  display: flex;
+  flex-direction: column;
+  /* Removed align-items: flex-start; - align-self on child messages will control it */
+}
+
+/* Individual message styling - COMMON for both student and AI */
+/* CHANGED: From .message to .chat-message to match scenario.js */
+.chat-message {
+  max-width: 70%; /* Limit message width */
+  padding: 0.8rem 1.2rem; /* Slightly more padding for better look */
+  border-radius: 20px; /* Rounded corners for chat bubbles */
+  margin-bottom: 0.75rem; /* Reduced margin for tighter bubbles */
+  font-weight: 500;
+  word-wrap: break-word; /* Ensure long words wrap */
+}
+
+/* Student (user) messages - Align to the right */
+/* CHANGED: From .message.student to .student-message to match scenario.js */
+.student-message {
+  background-color: #3949ab; /* Blue for student messages */
+  color: white;
+  align-self: flex-end; /* Align to the right */
+  border-bottom-right-radius: 5px; /* Sharper corner on the bottom-right */
+}
+
+/* AI messages (Patient/Physician) - Align to the left */
+/* CHANGED: From .message.ai to .patient-message to match scenario.js for patient. */
+/* If you send 'attending' as sender for attending's replies, consider adding .attending-message */
+.patient-message {
+  background-color: #e0e0e0; /* Light gray for patient messages */
+  color: #333;
+  align-self: flex-start; /* Align to the left */
+  border-bottom-left-radius: 5px; /* Sharper corner on the bottom-left */
+}
+
+/* OPTIONAL: If you want specific styling for Attending Physician replies */
+/* Add this if appendMessage sends 'attending' as sender for physician responses */
+.attending-message {
+    background-color: #e0e0e0; 
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+/* Chat Input Form */
+.chat-input-form {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.chat-input-form input[type="text"] {
+  flex-grow: 1;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Pill-shaped input */
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease;
+}
+
+.chat-input-form input[type="text"]:focus {
+  outline: none;
+  border-color: #5c6bc0;
+}
+
+.chat-input-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Pill-shaped button */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 80px; /* Ensure button has minimum width */
+}
+
+.chat-input-form button:hover {
+  background-color: #3949ab;
+}
+
+/* Loading and Error Indicators (from previous setup, adapted for new design) */
+/* Renamed from #loading-indicator to target .typing-indicator for visual consistency */
+.typing-indicator {
+    display: none; /* Hidden by default */
+    text-align: left; /* Align to left to match AI messages */
+    margin-top: 0.5rem;
+    margin-left: 10px; /* Match padding of messages */
+}
+
+.typing-indicator span {
+    display: inline-block;
+    background-color: #ccc;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+.error-message {
+  color: #d9534f;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #d9534f;
+  background-color: #f2dede;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Footer (from previous setup, adapted for new design) */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px; /* More space above footer */
+  background-color: #eee;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+      padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+      font-size: 1.6rem;
+  }
+
+  header p {
+      font-size: 1rem;
+  }
+
+  .search-section, .section-container {
+      margin: 1rem auto;
+      padding: 0 0.8rem;
+  }
+
+  /* Adjust scenario-container selector */
+  [id^="scenario-container-"] { /* Targets IDs starting with 'scenario-container-' */
+      grid-template-columns: 1fr; /* Stack cards on small screens */
+  }
+
+  .card-content {
+      padding: 1rem;
+  }
+
+  .card-content h3 {
+      font-size: 1.1rem;
+  }
+
+  .chat-container {
+      height: calc(100vh - 200px); /* Adjust height for smaller screens */
+      margin: 0.5rem;
+      padding: 0.8rem;
+  }
+
+  .mode-toggle-bar {
+      margin: 1rem auto;
+      padding: 3px;
+  }
+
+  .toggle-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+  }
+
+  .chat-input-form input[type="text"] {
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+  }
+
+  .chat-input-form button {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+      min-width: 70px;
+  }
+}
+
+/* Add this to your styles.css */
+.card-link {
+  text-decoration: none; /* Removes underline from the link */
+  color: inherit;        /* Ensures text color is inherited from parent, not default blue */
+  display: flex;         /* Makes the link fill its parent card-content area */
+  flex-direction: column; /* Organizes content within the link */
+  height: 100%;          /* Ensures the link takes full height of the card content */
+}
+
+/* Optional: Improve hover feedback for the entire card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Chat Actions Container (for the export button) */
+.chat-actions {
+  display: flex;
+  justify-content: flex-end; /* Align button to the right */
+  padding: 0.5rem 0; /* Some padding above/below */
+  border-top: 1px solid #eee; /* Separator from messages */
+}
+
+.action-button {
+  padding: 0.7rem 1.2rem;
+  background-color: #5c6bc0; /* Indigo color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #3949ab; /* Darker indigo on hover */
+}
+
+/* Add a margin to the chat input form if the button is placed right above it */
+.chat-input-form {
+    margin-top: 1rem; /* Adjust as needed */
+}
+
+/* Also ensure that .messages has enough padding-bottom if button is below it,
+   or that .chat-actions has padding-top to separate them. */
+.messages {
+    /* ... existing styles ... */
+    padding-bottom: 0.5rem; /* Ensure some space before buttons */
+}

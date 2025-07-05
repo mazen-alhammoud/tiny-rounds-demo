@@ -1,0 +1,71 @@
+{
+  "name": "tinyrounds",
+  "version": "1.0.0",
+  "description": "A platform to simulate pediatric cases.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",   
+    "dist": "electron-builder -m"          
+  },
+  "keywords": [],
+  "author": {
+    "name": "Mazen Al Hammoud & Rama Sleiman",
+    "email": "mazen.alhammoud@lau.edu" 
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/mazen-alhammoud/tiny-rounds",
+  "dependencies": {   
+    "express": "^4.19.2",  
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "openai": "^4.52.0", 
+    "node-fetch": "^3.3.2",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron": "^29.4.6",
+    "electron-builder": "^26.0.12" 
+  },
+  "build": {
+    "appId": "com.mazenandrama.medicalsimulation", 
+    "productName": "TinyRounds",          
+    "copyright": "Copyright © 2025 Mazen Al Hammoud & Rama Sleiman", 
+    "directories": {
+      "output": "dist" 
+    },
+   "files": [
+  "**/*",
+  "!node_modules/electron{,**/*}",
+  "!node_modules/electron-builder{,**/*}",
+  "!node_modules/.bin",
+  "!.git",
+  "!.vscode",
+  "!.env.local", 
+  "!.DS_Store"
+  ],
+    "extraFiles": [
+      {
+        "from": "./data",
+        "to":  "./Resources/data",
+        "filter": ["**/*"]
+      }
+    ],
+    "mac": {
+      "icon": "build/icon.icns", 
+      "category": "public.app-category.education",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "icon": "build/icon.ico", 
+      "target": ["nsis", "zip"] 
+    },
+    "linux": {
+      "icon": "build/icon.png", 
+      "target": ["AppImage", "deb"]
+    }
+  }
+}

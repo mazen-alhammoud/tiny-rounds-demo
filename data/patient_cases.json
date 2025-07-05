@@ -1,0 +1,10 @@
+[
+    {
+      "id": "case1",
+      "title": "I Have A Very Bad Headache",
+      "specialty": "Pediatric Neurology",
+      "summary": "A 16-year-old female presents with recurrent headaches for the past 6 months.",
+      "initial_message": "Hi... (fidgets a bit) I haven't been feeling well lately...",
+      "status": "active"
+    }
+  ]
