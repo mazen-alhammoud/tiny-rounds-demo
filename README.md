@@ -53,7 +53,7 @@ Before you begin, ensure you have the following installed:
     Create a `.env` file in the root of your project directory (`tiny-rounds-demo/.env`).
     Add your OpenAI API key to this file:
     ```
-    OPENAI_API_KEY="YOUR_OPENAI_API_KEY_HERE"
+    OPENAI_API_KEY=YOUR_OPENAI_API_KEY_HERE
     ```
     **Important:** Do not commit your `.env` file to version control! It's already included in `.gitignore`.
 
