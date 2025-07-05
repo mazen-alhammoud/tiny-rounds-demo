@@ -1,4 +1,4 @@
-# TinyRounds: Pediatric Case Simulations
+# TinyRounds: Pediatrics Case Simulations
 
 ![TinyRounds Screenshot - Home Page](screenshots/home-page.png) ![TinyRounds Screenshot - Case Scenario](screenshots/case-scenario.png) A desktop application built with Electron, React (or your frontend framework), Node.js, and OpenAI, designed to simulate pediatric medical cases for educational purposes. This platform allows users to engage with simulated patient interactions and receive feedback from a virtual attending physician.
 
